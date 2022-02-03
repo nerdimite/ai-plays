@@ -2,6 +2,16 @@
 
 This repository is a collection various AI algorithms for building a bot that can play TicTacToe. This repository is like my workspace for AI as I learn to implement various Classical AI algorithms and (Deep) Reinforcement Learning algorithms.
 
+## Usage
+
+### Play TicTacToe Game
+
+Run the `tictactoe.py` script to play the game with 2 human players.
+
+```bash
+python tictactoe.py
+```
+
 ## Algorithms to Implement
 
 - [x] Code a Normal 2 Player TicTacToe Terminal Game
