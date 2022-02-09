@@ -32,15 +32,15 @@ optional arguments:
 To run without animation,
 
 ```bash
-cd tictactoe
-python tictactoe.py -n 8
+cd nqueens
+python nqueens_solver.py -n 8
 ```
 
 To run with animation,
 
 ```bash
-cd tictactoe
-python tictactoe.py -n 8 --animate
+cd nqueens
+python nqueens_solver.py -n 8 --animate
 ```
 
 ## TODO

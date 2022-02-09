@@ -54,13 +54,13 @@ def csp_solver(board, col, is_animate=False):
                     board[row, col] = 0
 
                     if is_animate:
-                        visualize(n, row, col, ' ')
+                        visualize(n, row, col, viz_board[row][col])
                         sleep(0.05)
             else:
                 board[row, col] = 0
 
                 if is_animate:
-                    visualize(n, row, col, ' ')
+                    visualize(n, row, col, viz_board[row][col])
                     sleep(0.05)
     else:
         return False
@@ -71,12 +71,6 @@ def visualize(n, row, col, to_place='👑'):
     Visualizes the board in the terminal and places the 
     queen at a particular location on the board
     '''
-    # move((n * 2) - (row * 2) + 2, 'up')
-    # if col > 0:
-    #     move((col * 5), 'right')
-    # write(f" {to_place} ")
-    # write("\n" * ((n * 2) - (row * 2) + 2))
-
     move(n - row + 1, 'up')
     if col > 0:
         move(col * 2, 'right')
@@ -93,16 +87,22 @@ if __name__ == '__main__':
                         default=6, help="Number of queens. Default is 6.")
     parser.add_argument('--animate', action='store_true',
                         help='Use this flag to animate the backtracking process as it explores and places the queens on the board.')
-    parser.add_argument('--viz_array', action='store_true')
     args = parser.parse_args()
 
+    # Define problem
     n = args.nqueens
+    board = np.zeros((n, n))
 
     print(f'⚙️Backtracking to solve {n}-Queens...')
-    # Print Chess Board
-    print()
+
+    # ======== Visualize Board ========
+    # black and white boxes
     squares = ['🔲', '🔳']
     s = 0
+    # a copy of board with colors for reference during animation
+    viz_board = board.tolist()
+
+    print()
     for i in range(n):
         if s:
             s = 0
@@ -110,6 +110,7 @@ if __name__ == '__main__':
             s = 1
         for j in range(n):
             print(squares[s], end='')
+            viz_board[i][j] = squares[s]
             if s:
                 s = 0
             else:
@@ -117,38 +118,17 @@ if __name__ == '__main__':
         print()
     print()
 
-    # for i in range(n):
-    #     print("    |" * (n-1) + "    ")
-    #     if i < n-1:
-    #         print("—————" * (n-1) + "————")
-    # print()
-
-    # Solve the CSP Problem
-    board = np.zeros((n, n))
-
+    # ======== Solve the CSP Problem ========
     if csp_solver(board, 0, args.animate):
         is_solved = True
     else:
         is_solved = False
 
-    # Print the Solution on the Board
+    # ======== Print the Solution on the Board ========
     for row in range(n):
         for col in range(n):
             if board[row, col] == 1:
                 visualize(n, row, col)
-
-    # # Print array in case of
-    # if n > 8:
-    #     print('Printing a smaller array version of the solution board as the visualization would \
-    #         have gotten messed up at large numbers due to scrolling.')
-    #     board_list = board.tolist()
-    #     for row in range(n):
-    #         for col in range(n):
-    #             if board[row, col] == 1:
-    #                 board_list[row][col] = '👑'
-    #             else:
-    #                 board_list[row][col] = '🟦'
-    #     print(np.array(board_list))
 
     if is_solved:
         print('✅ Problem Solved Successfully 🎉')
