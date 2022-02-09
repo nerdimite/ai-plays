@@ -8,7 +8,7 @@ To run the solver normally,
 
 ```bash
 cd nqueens
-python nqueens_solver.py -n 8
+python nqueens_solver.py -n 12
 ```
 
 ![NQueens Without Animation](gifs/nqueens_no_animation.gif)
@@ -19,7 +19,7 @@ To run it with a live animation of backtracking,
 
 ```bash
 cd nqueens
-python nqueens_solver.py -n 8 --animate
+python nqueens_solver.py -n 6 --animate
 ```
 
 ![NQueens With Animation](gifs/nqueens_with_animation.gif)
