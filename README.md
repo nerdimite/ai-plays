@@ -17,7 +17,7 @@ python tictactoe.py
 
 ![NQueens Animation](nqueens/NQueens_Animation.gif)
 
-Run the [nqueens_solver.py](nqueens/nqueens_solver.py) script to play the game with 2 human players.
+Run the [nqueens_solver.py](nqueens/nqueens_solver.py) script to solve NQueens with Backtracking.
 
 ```bash
 usage: nqueens_solver.py [-h] [-n NQUEENS] [--animate]
