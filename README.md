@@ -5,7 +5,7 @@ This repository is a collection various AI algorithms for building a bot that ca
 ## Contents
 
 1. [Implementation of Two Player TicTacToe Game](tictactoe/)
-2. [Solving N-Queens (a Constraint Satisfaction Problem) with Backtracking](tictactoe/)
+2. [Solving N-Queens (a Constraint Satisfaction Problem) with Backtracking](nqueens/)
 
 ## TODO
 
