@@ -91,6 +91,9 @@ if __name__ == '__main__':
 
     # Define problem
     n = args.nqueens
+    if n < 4:
+        print('⚠️ Minimum number of queens must be 4')
+        exit()
     board = np.zeros((n, n))
 
     print(f'⚙️Backtracking to solve {n}-Queens...')
@@ -133,4 +136,4 @@ if __name__ == '__main__':
     if is_solved:
         print('✅ Problem Solved Successfully 🎉')
     else:
-        print('❌ Failed to Solved')
+        print('❌ Failed to Solve')

@@ -15,8 +15,6 @@ python tictactoe.py
 
 ### Solve a CSP (NQueens) using Backtracking
 
-![NQueens Animation](nqueens/NQueens_Animation.gif)
-
 Run the [nqueens_solver.py](nqueens/nqueens_solver.py) script to solve NQueens with Backtracking.
 
 ```bash
@@ -31,19 +29,27 @@ optional arguments:
   --animate             Use this flag to animate the backtracking process as it explores and places the queens on the board.
 ```
 
-To run without animation,
+#### How to Run Normally
+
+To run the solver normally,
 
 ```bash
 cd nqueens
 python nqueens_solver.py -n 8
 ```
 
-To run with animation,
+![NQueens Without Animation](nqueens/gifs/nqueens_no_animation.gif)
+
+#### How to Run with Animation
+
+To run it with a live animation of backtracking,
 
 ```bash
 cd nqueens
 python nqueens_solver.py -n 8 --animate
 ```
+
+![NQueens With Animation](nqueens/gifs/nqueens_with_animation.gif)
 
 ## TODO
 
