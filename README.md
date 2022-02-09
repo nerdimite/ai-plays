@@ -15,6 +15,8 @@ python tictactoe.py
 
 ### Solve a CSP (NQueens) using Backtracking
 
+![NQueens Animation](nqueens/NQueens_Animation.gif)
+
 Run the [nqueens_solver.py](nqueens/nqueens_solver.py) script to play the game with 2 human players.
 
 ```bash
