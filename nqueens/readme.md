@@ -7,7 +7,6 @@ This is an implementation of Backtracking (DFS) to solve a Constraint Satisfacti
 To run the solver normally,
 
 ```bash
-cd nqueens
 python nqueens_solver.py -n 12
 ```
 
@@ -18,7 +17,6 @@ python nqueens_solver.py -n 12
 To run it with a live animation of backtracking,
 
 ```bash
-cd nqueens
 python nqueens_solver.py -n 6 --animate
 ```
 
