@@ -1,6 +1,6 @@
 # AI Plays
 
-This repository is a collection various AI algorithms for building a bot that can play simple games or solve foundational problems. This repository is like my workspace for AI as I learn to implement various Classical AI algorithms and applying (Deep) Reinforcement Learning algorithms on those problems.
+This repository is a collection of various classical AI and Reinforcement Learning algorithms for building agents that can play simple games or solve problems. This repository is like my workspace for AI as I learn to implement various Classical AI algorithms and applying Reinforcement Learning algorithms on those problems.
 
 ## Contents
 
