@@ -1,6 +1,6 @@
-# AI Plays
+# AI Plays (Classical Methods)
 
-This repository is a collection of various classical AI and Reinforcement Learning algorithms for building agents that can play simple games or solve problems. This repository is like my workspace for AI as I learn to implement various Classical AI algorithms and applying Reinforcement Learning algorithms on those problems.
+This repository is a collection of various Classical AI and Reinforcement Learning algorithms for building agents that can play simple games or solve problems. This repo is a precursor to a future collection of Deep Reinforcement Learning Algorithms.
 
 ## Contents
 
@@ -17,11 +17,7 @@ A checklist of things to do in this repository.
 - [x] Maze Solving with DFS and BFS
 - [ ] Maze Solving with A\* Search
 - [ ] Monte Carlo Methods for Blackjack
-- [ ] Create a Gym Environments for TicTacToe
-- [ ] Create a Gym Environments for Connect 4
+- [ ] Create Gym Environment for TicTacToe
 - [ ] MinMax Algorithm and Self-Play
 - [ ] NeuroEvolution
 - [ ] Classical Q Learning
-- [ ] Deep Q Learning
-- [ ] AlphaZero with Monte Carlo Tree Search (MCTS)
-- [ ] MuZero
