@@ -48,19 +48,21 @@ def solve_dfs(m):
 def run(height=7, width=7, animate=False, delay=100):
 
     m = maze(height, width)
-    m.CreateMaze()
+    m.CreateMaze(loopPercent=90)
     explored, dfs_path, final_path = solve_dfs(m)
-
-    final_agent = agent(m, footprints=True, color=COLOR.yellow,
-                        shape='square', filled=False)
 
     if animate:
         explorer = agent(m, footprints=True, color=COLOR.green, shape='square')
         reverse_agent = agent(m, 1, 1, footprints=True, color=COLOR.cyan,
                               shape='square', filled=True, goal=(m.rows, m.cols))
+        final_agent = agent(m, footprints=True, color=COLOR.yellow,
+                            shape='square', filled=False)
 
         m.tracePath({explorer: explored}, delay=delay)
         m.tracePath({reverse_agent: dfs_path}, delay=delay)
+    else:
+        final_agent = agent(m, footprints=True, color=COLOR.blue,
+                            shape='square', filled=True)
 
     m.tracePath({final_agent: final_path}, delay=delay)
 

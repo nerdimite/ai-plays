@@ -6,6 +6,7 @@ This repository is a collection of various classical AI and Reinforcement Learni
 
 1. [Implementation of Two Player TicTacToe Game](tictactoe/)
 2. [Solving N-Queens (a Constraint Satisfaction Problem) with Backtracking](nqueens/)
+3. [Solving Mazes with Various Search Algorithms](maze_solving/)
 
 ## TODO
 
@@ -13,7 +14,11 @@ A checklist of things to do in this repository.
 
 - [x] Code a Normal 2 Player TicTacToe Terminal Game
 - [x] Solving a Constraint Satisfaction Problem (NQueens) using Backtracking
-- [ ] Convert the Game to a Gym Environment or a similar Interface so that the AI can interact with it easily.
+- [x] Maze Solving with DFS and BFS
+- [ ] Maze Solving with A\* Search
+- [ ] Monte Carlo Methods for Blackjack
+- [ ] Create a Gym Environments for TicTacToe
+- [ ] Create a Gym Environments for Connect 4
 - [ ] MinMax Algorithm and Self-Play
 - [ ] NeuroEvolution
 - [ ] Classical Q Learning

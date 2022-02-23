@@ -12,6 +12,8 @@ You can run the maze solving program using different algorithms as shown below:
 
 ### Depth-first Search
 
+This algorithm is faster but doesn't guarantee the shortest path.
+
 ```
 python maze_solver.py --algo dfs
 ```
@@ -23,6 +25,8 @@ python maze_solver.py --algo dfs --animate
 ```
 
 ### Breadth-first Search
+
+This algorithm is slower but guarantees the shortest path.
 
 ```
 python maze_solver.py --algo bfs
