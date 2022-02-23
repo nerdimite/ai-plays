@@ -48,10 +48,10 @@ Solves a Maze using Various Search Algorithms
 optional arguments:
   -h, --help        show this help message and exit
   --algo {dfs,bfs}  Search Algorithm to use to solve the Maze. Default is bfs.
-  --height HEIGHT   Height of Maze in number of cells. Default is 7.
-  --width WIDTH     Width of Maze in number of cells. Default is 7.
+  --height HEIGHT   Height of Maze in number of cells. Default is 10.
+  --width WIDTH     Width of Maze in number of cells. Default is 20.
   --animate         Use this flag to fully animate the search process as the agent explores the maze.
-  --delay DELAY     Delay between each animation step in milliseconds. Default is 150ms.
+  --delay DELAY     Delay between each animation step in milliseconds. Default is 100.
 ```
 
 ## References
