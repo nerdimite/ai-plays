@@ -1,18 +1,18 @@
 from pyamaze import maze, agent, COLOR
+from collections import deque
 
 
-def solve_dfs(m):
-
+def solve_bfs(m):
     start = (m.rows, m.cols)
 
     explored = [start]
-    frontier = [start]
+    frontier = deque([start])
 
-    dfs_path = {}
+    bfs_path = {}
 
     while len(frontier) > 0:
 
-        curr_cell = frontier.pop()
+        curr_cell = frontier.popleft()
 
         if curr_cell == (1, 1):
             break
@@ -34,22 +34,22 @@ def solve_dfs(m):
                 explored.append(child_cell)
                 frontier.append(child_cell)
 
-                dfs_path[child_cell] = curr_cell
+                bfs_path[child_cell] = curr_cell
 
     final_path = {}
     cell = (1, 1)
     while cell != start:
-        final_path[dfs_path[cell]] = cell
-        cell = dfs_path[cell]
+        final_path[bfs_path[cell]] = cell
+        cell = bfs_path[cell]
 
-    return explored, dfs_path, final_path
+    return explored, bfs_path, final_path
 
 
 def run(height=7, width=7, animate=False, delay=100):
 
     m = maze(height, width)
     m.CreateMaze()
-    explored, dfs_path, final_path = solve_dfs(m)
+    explored, bfs_path, final_path = solve_bfs(m)
 
     final_agent = agent(m, footprints=True, color=COLOR.yellow,
                         shape='square', filled=False)
@@ -60,7 +60,7 @@ def run(height=7, width=7, animate=False, delay=100):
                               shape='square', filled=True, goal=(m.rows, m.cols))
 
         m.tracePath({explorer: explored}, delay=delay)
-        m.tracePath({reverse_agent: dfs_path}, delay=delay)
+        m.tracePath({reverse_agent: bfs_path}, delay=delay)
 
     m.tracePath({final_agent: final_path}, delay=delay)
 
